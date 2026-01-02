@@ -45,3 +45,35 @@ cd backend
 npm install
 cp .env.example .env
 npm start
+```
+
+### Frontend Setup
+```bash
+cd frontend
+npm install
+npm start
+```
+
+Backend runs on http://localhost:5000
+Frontend runs on http://localhost:3000
+
+
+## 🔐 Authentication Flow
+
+User logs in with email & password
+
+Server validates credentials
+
+JWT token is generated and returned
+
+Token is stored in browser localStorage
+
+Token is sent in Authorization header for protected routes
+
+## 📄 API Documentation
+
+Postman collection is included in the repository.
+
+## 🚀 Scalability Notes
+
+The backend is stateless and uses JWT-based authentication, allowing horizontal scaling. The application can be containerized using Docker and deployed behind a load balancer. Redis can be added for caching and rate limiting in high-traffic scenarios.
